@@ -7,8 +7,27 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    width: 100%;
+    height: 90px;
+    background-color:black ;
+    color: white;
+    padding: 5px;
+}
+.login-detail{
+    display: flex;
+    flex-direction: column;
+}
+.login-detail button{
+    background-color: black;
+    color: rgb(240, 231, 231);
+    width: 80px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 15px;
+    border: 1px solid rgb(102, 101, 101);
+    border-radius: 4px;
+}
+.login-detail button:hover{
+background-color: rgb(43, 42, 42);
 }
 
 .top-bar {
@@ -19,7 +38,7 @@ header {
 }
 
 .heading {
-    font-size: 25px;
+    font-size: 27px;
 }
 
 .top-bar i:hover {
@@ -31,13 +50,14 @@ header {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    padding-top: 10px;
 
 }
 
 .nav-bar a {
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: 17px;
 
 }
 
@@ -51,6 +71,7 @@ header {
     justify-content: space-between;
     padding: 5%;
     flex: 0 0 90%;
+    border: 2px solid black;
 }
 
 .first-img {
@@ -61,25 +82,23 @@ header {
     border: 0 white;
     border-radius: 10px;
     margin: 0;
+    
 }
-h3{
-   text-align: left;
-   padding: 7px 2px;
-    font-weight: 700;
+
+h3 {
+    text-align: left;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 7px 8px;
+    font-weight:700;
     max-width: 100%;
-    font-size: 30px;
-    letter-spacing: 3px;
+    font-size: 27px;
     color: black;
-    border:5px white;
-    border-radius: 5px;
-    height: 30px;
-    overflow: hidden;
     margin: 15px 10px;
 }
 
 .firstnewstitle {
     padding: 10px;
-    display: flexbox;
+    display: flex;
     flex-direction: column;
     flex: 0 0 40%;
 }
@@ -87,7 +106,7 @@ h3{
 .firstnews a {
     text-decoration: none;
     color: black;
-    font-size: 30px;
+    font-size: 32px;
     font-family: sans-serif;
 }
 
@@ -95,49 +114,56 @@ h3{
     text-decoration: underline;
 }
 
-.top-news {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    justify-content: space-evenly;
-    gap: 16px;
-    padding: 7px;
-    font-size: 12px;
+
+.topNews-Container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
 
 .top {
-    border: 1px white;
+    border: 1px solid black;
     border-radius: 8px;
-    overflow: hidden;
+    width: 250px;
     text-align: left;
-    padding-top: 20px;
-    display: flexbox;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .top-img {
-    width: 100%;
+    margin-top: 10px;
+    width: 220px;
     height: auto;
-    object-fit: contain;
     border: 10px white;
     border-radius: 10px;
-    margin-bottom: 20px;
+}
+
+.top .top-details{
+    gap: 0;
+   display: flex;
+   flex-direction: column;
+   align-content: end;
+}
+.top-details p{
+    font-size: 12px;
+
 }
 
 .top-news a {
     text-decoration: none;
     color: black;
-    width: 20%;
-    padding-left: 8px;
-    font-size: 20px;
+    font-weight: 600;
 }
 
 .top-news a:hover {
     text-decoration: underline;
 }
 
-.description {
-    width: 40%;
-}
-.sportsTab{
+
+
+.sportsTab {
     display: flex;
     justify-content: space-between;
     background-color: rgba(31, 29, 29, 0.932);
@@ -146,33 +172,42 @@ h3{
     margin: 0 10px;
 
 }
-.sportsLeft ,.sportsRight{
+
+.sportsLeft,
+.sportsRight {
     display: grid;
     justify-content: center;
     width: 400px;
     max-width: 400px;
     background-color: rgba(31, 29, 29, 0.932);
 
-gap: 2px;
+    gap: 2px;
 }
-.sportsLeft img , .sportsRight img{
+
+.sportsLeft img,
+.sportsRight img {
     display: flex;
-    width:250px;
+    width: 250px;
     max-width: 300px;
     border: 0px solid grey;
     border-radius: 5px;
 }
-.sportsLeft a , .sportsRight a{
+
+.sportsLeft a,
+.sportsRight a {
     display: flex;
     text-decoration: none;
     width: 250px;
     color: white;
 
 }
-.sportsLeft a:hover , .sportsRight a:hover{
+
+.sportsLeft a:hover,
+.sportsRight a:hover {
     text-decoration: underline;
 }
-.sportsTop{
+
+.sportsTop {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -184,65 +219,99 @@ gap: 2px;
     background-color: rgba(31, 29, 29, 0.932);
 
 }
-.sportsTop .sportsImg1{
-  
-   width: 100%;
-   height: auto;
+
+.sportsTop .sportsImg1 {
+
+    width: 100%;
+    height: auto;
 }
-.sportsTop a{
+
+.sportsTop a {
     width: auto;
-align-items: center;
-color: white;
-font-size: 20px;
-text-decoration: none;
-text-align: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-align: center;
 }
-.sportsTop a:hover{
+
+.sportsTop a:hover {
     text-decoration: underline;
 }
-.sportsTop p{
+
+.sportsTop p {
     color: white;
     text-align: center;
     font-size: 13px;
 
 }
-.categories{
+
+.categories {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
 
 }
+
 .categories h4{
     font-size: 20px;
+    display: flex;
+    justify-content: space-between;
 }
-.Health , .Business, .technology{
+
+.Health,
+.Business,
+.technology {
     display: grid;
-align-content: center;
+    align-content: center;
 }
-.Health img , .Business img , .technology img{
+
+.Health img,
+.Business img,
+.technology img {
     width: 180px;
     height: auto;
     max-height: 100px;
 }
-.news{
+
+.news {
     display: flex;
     flex-direction: row;
 }
 
-.news a{
+.news a {
     width: 165px;
     height: auto;
     margin-top: 8px;
     max-height: 100px;
 
 }
-.enterNews{
+
+.enterNews {
     display: flex;
     flex-direction: row;
     overflow: scroll;
+    padding:0;
 
 }
-.entNews{
+
+.enterNews::-webkit-scrollbar{
+    background-color: transparent;
+    border-radius: 20px;
+    width: 2px;
+    padding-top: 20px;
+    
+}
+.enterNews::-webkit-scrollbar-thumb{
+    background-color: transparent;
+    border-radius: 20px;
+}
+.enterNews::-webkit-scrollbar-button{
+    background-color: transparent;
+    color: azure;
+}
+
+.entNews {
     display: flex;
     flex-direction: column;
     border: 2px solid grey;
@@ -251,60 +320,102 @@ align-content: center;
     backdrop-filter: blur(50px);
 
     color: black;
-    width: 260px;
+    width: 220px;
     height: 280px;
     text-align: center;
     justify-content: space-between;
-    
+
 }
-.entNews a{
+
+.entNews a {
     text-decoration: none;
     color: black;
     
+
 }
-.entNews p{
-    font-size: 12px;
+.entNews a:hover {
+    text-decoration: underline;
+
+}
+
+.entNews p {
+    font-size: 11px;
     color: blue;
     text-align: left;
+    cursor: pointer;
 }
-.entertainment{
+
+.entertainment {
     display: flex;
     justify-content: space-between;
 
 }
-.entNews img{
+
+.entNews img {
     padding-top: 5px;
-    width: 250px;
-  height: auto;
-  max-height:300px ;
+    width: 210px;
+    max-height: 150px;
 }
 
 
-.moreNews{
+.moreNews {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-gap: 5px;  
-vertical-align: top;
+    gap: 5px;
+    vertical-align: top;
 
 
 }
-.moreDet{
+
+.moreDet {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 300px;
+    width: 310px;
+    padding-left: 20px;
 }
-.moreDet a:hover{
+.moreDet a{
+    color: black;text-decoration: none;
+}
+
+    
+.moreDet a:hover {
     text-decoration: underline;
     display: flex;
 
 }
-.moreDet p{
+
+.moreDet p {
     font-size: 11px;
     color: rgb(6, 6, 172);
+    cursor: pointer;
 }
-.enterNews{
+.moreDet p:hover , .entNews p:hover{
+    text-decoration: underline;
+}
+footer{
+    background-color: black;
+    color: rgb(237, 233, 233);
+    height: 200px;
+    padding: 10px;
+    
+}
+footer .footer-tab{
     display: flex;
-
+    gap: 15px;
+    font-size: 16px;
 }
-
+footer .footer-tab a{
+    text-decoration: none;
+    color: white;
+}
+footer .footer-tab a:hover{
+    text-decoration: underline;
+}
+footer .logos{
+    font-size: 20px;
+    word-spacing: 10px;
+}
+footer .logos i:hover{
+    font-size: 18px;
+}
