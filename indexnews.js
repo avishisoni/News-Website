@@ -1,8 +1,7 @@
-const apiKey = '1455b929237dacb1145484bb186cd80c';
-
+import {API_KEY} from "./config.js";
 
 function createApiUrl(category, value) {
-    return `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=any&max=${value}&apikey=${apiKey}`;
+    return `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=any&max=${value}&apikey=${API_KEY}`;
 }
 //top 10 news
 const topten = document.querySelector('.topNews-Container')
